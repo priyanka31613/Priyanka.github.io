@@ -2,195 +2,47 @@
 <html>
 <head>
 
-<title>Priyanka | Cyber Security Graduate</title>
+<title>Priyanka | Cyber Security Portfolio</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-
-/* Background */
-
-body{
-    margin:0;
-    font-family: Arial;
-    background:#020617;
-    color:white;
-}
-
-/* Hero Section */
-
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    flex-direction:column;
-    background: radial-gradient(circle at center,#0f172a,#020617);
-}
-
-.hero h1{
-    font-family:'Orbitron', sans-serif;
-    font-size:60px;
-    color:#38bdf8;
-    margin:0;
-}
-
-.hero p{
-    max-width:600px;
-    margin-top:25px;
-    line-height:1.6;
-}
-
-/* Button */
-
-.btn{
-    margin-top:35px;
-    padding:15px 35px;
-    background:#38bdf8;
-    color:black;
-    border-radius:10px;
-    text-decoration:none;
-    transition:0.4s;
-}
-
-.btn:hover{
-    transform:scale(1.08);
-}
-
-/* Floating Animation */
-
-@keyframes float{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-18px);}
-    100%{transform:translateY(0px);}
-}
-
-.hero-content{
-    animation:float 5s ease-in-out infinite;
-}
-
-/* Scroll Fade */
-
-.fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-}
-
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
+<nav>
+
+<div class="logo">Priyanka</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="skills.html">Tech Stack</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+
 <section class="hero">
 
-<div class="hero-content fade">
+<div class="card">
 
-<h1>Priyanka</h1>
+<h1>Cyber Security Graduate</h1>
 
 <p>
-Cyber Security Graduate | SOC Monitoring | Network Security | SIEM Analysis<br><br>
-
-Master of Information Technology graduate passionate about security operations,
-threat detection, and infrastructure protection.
+Specialising in SOC monitoring, SIEM analysis,
+and network security.
 </p>
 
-<a class="btn" href="#projects">Explore My Work</a>
+<a href="projects.html" class="btn">View Projects</a>
 
 </div>
 
 </section>
-
-<section id="about" style="padding:100px 12%;">
-
-<h2 style="color:#38bdf8;font-family:'Orbitron',sans-serif;">
-About Me
-</h2>
-
-<div style="background:#1e293b;padding:40px;border-radius:18px;margin-top:30px;line-height:1.7;">
-
-<p>
-I am a Master of Information Technology graduate specialising in Networking and Cyber Security.
-I am passionate about security monitoring, threat detection, and defensive infrastructure protection.
-
-My practical experience includes building SIEM monitoring environments using ELK Stack,
-working with Linux-based systems, performing log analysis, and assisting in basic security assessments.
-
-I am actively seeking entry-level Cyber Security or SOC Analyst opportunities in Australia.
-</p>
-
-</div>
-
-
-<h2 style="color:#38bdf8;font-family:'Orbitron',sans-serif;margin-top:70px;">
-Technical Skills
-</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:15px;margin-top:30px;">
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Linux Administration
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-SIEM Monitoring (ELK Stack)
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Docker Virtualization
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Network Security Fundamentals
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Wireshark Analysis
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Nmap Scanning
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Python Automation Basics
-</span>
-
-<span style="background:#334155;padding:12px 18px;border-radius:8px;">
-Azure Fundamentals
-</span>
-
-</div>
-
-</section>
-<script>
-
-/* Animation Trigger */
-
-const elements = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", ()=>{
-
-elements.forEach(el=>{
-    const pos = el.getBoundingClientRect().top;
-
-    if(pos < window.innerHeight - 120){
-        el.classList.add("show");
-    }
-});
-
-});
-
-</script>
 
 </body>
 </html>
