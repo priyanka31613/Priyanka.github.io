@@ -1,0 +1,55 @@
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#6b73ff,#000dff);
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.card{
+background:white;
+color:black;
+padding:50px;
+border-radius:20px;
+text-align:center;
+width:400px;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#6b73ff;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
