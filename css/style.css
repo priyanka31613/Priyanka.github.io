@@ -113,9 +113,12 @@ nav a.active {
 .pill-btn {
   padding: 8px 20px;
   border-radius: 999px;
-  background: #111;
-  color: #fff;
+  background: #000000;        /* Pure black */
+  color: #ffffff !important;  /* Pure white text */
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* Slight shadow */
 }
+
 
 /* CENTER LAYOUT */
 
