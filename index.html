@@ -1,48 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Priyanka | Cyber Security Portfolio</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <title>Priyanka | Cyber Security Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Priyanka</div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Tech Stack</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="logo">Priyanka</div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-card">
 
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="skills.html">Tech Stack</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+      <!-- top mini profile and menu -->
+      <header class="hero-header">
+        <div class="mini-profile">
+          <img src="images/profile.png" alt="Profile" class="mini-avatar">
+          <span class="mini-name">Priyanka</span>
+        </div>
+        <ul class="hero-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html" class="pill-btn">Contact</a></li>
+        </ul>
+      </header>
 
-</nav>
+      <!-- center content -->
+      <div class="hero-main">
+        <div class="hero-text hero-left">
+          <p class="small-label">PRIYANKA</p>
+          <h1>CYBER</h1>
+        </div>
 
+        <div class="hero-photo-wrap">
+          <div class="hero-photo">
+            <img src="images/profile.png" alt="Profile" class="hero-img">
+          </div>
+          <button class="hi-btn">Hi</button>
+        </div>
 
-<section class="hero">
+        <div class="hero-text hero-right">
+          <h1>SECURITY</h1>
+          <p class="subtitle">
+            I’m an Australia‑based cyber security graduate specialising in SOC monitoring,
+            SIEM analysis and network security.
+          </p>
+        </div>
+      </div>
 
-<div class="card">
+      <!-- bottom slider dot -->
+      <div class="hero-footer">
+        <span class="slider-dot"></span>
+      </div>
 
-<h1>Cyber Security Graduate</h1>
-<img src="images/profile.png" alt="Profile Photo" class="profile-img">
-<p>
-Specialising in SOC monitoring, SIEM analysis,
-and network security.
-</p>
-
-<a href="projects.html" class="btn">View Projects</a>
-
-</div>
-
-</section>
+    </div>
+  </section>
 
 </body>
 </html>
