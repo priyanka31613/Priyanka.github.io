@@ -1,16 +1,30 @@
-body{
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
 background:linear-gradient(135deg,#6b73ff,#000dff);
 color:white;
+min-height:100vh;
 }
+
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 10%;
 background:rgba(0,0,0,0.2);
 backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
 }
 
 nav ul{
@@ -25,7 +39,14 @@ margin-left:25px;
 nav a{
 color:white;
 text-decoration:none;
+font-size:16px;
 }
+
+nav a:hover{
+opacity:0.8;
+}
+
+/* HERO SECTION */
 
 .hero{
 height:90vh;
@@ -33,6 +54,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 }
+
+/* CARD */
 
 .card{
 background:white;
@@ -44,6 +67,29 @@ width:400px;
 box-shadow:0 20px 40px rgba(0,0,0,0.3);
 }
 
+/* PROFILE IMAGE */
+
+.profile-img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:50%;
+margin:20px 0;
+}
+
+/* TEXT */
+
+.card h1{
+margin-bottom:10px;
+}
+
+.card p{
+margin-top:10px;
+line-height:1.6;
+}
+
+/* BUTTON */
+
 .btn{
 display:inline-block;
 margin-top:20px;
@@ -52,4 +98,8 @@ background:#6b73ff;
 color:white;
 border-radius:8px;
 text-decoration:none;
+}
+
+.btn:hover{
+background:#4e56e8;
 }
