@@ -10,6 +10,17 @@ body {
   min-height: 100vh;
 }
 
+.big-hi {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 4px;
+  letter-spacing: 1px;
+}
+
+
 /* NAVBAR */
 
 nav {
