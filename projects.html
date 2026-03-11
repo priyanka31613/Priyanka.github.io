@@ -1,112 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Priyanka | Cyber Security Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+
+<meta charset="UTF-8">
+<title>Projects | Priyanka | Cyber Security Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
-  <section class="hero">
-    <div class="hero-card">
+<section class="hero">
 
-      <!-- top mini profile and menu -->
-      <header class="hero-header">
-        <div class="mini-profile">
-          <img src="images/profile.png" alt="Profile" class="mini-avatar">
-          <span class="mini-name">Priyanka</span>
-        </div>
-        <ul class="hero-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="contact.html" class="pill-btn">Contact</a></li>
-        </ul>
-      </header>
+<div class="hero-card">
 
-      <!-- PROJECTS HEADER -->
-      <div class="projects-header">
-        <h1 class="projects-main-title">PROJECTS</h1>
-        <p class="projects-subtitle">Hands-on cyber security projects showcasing real-world skills</p>
-      </div>
+<!-- HEADER -->
+<header class="hero-header">
 
-      <div class="projects-container">
+<div class="mini-profile">
+<img src="images/profile.png" alt="Priyanka Profile" class="mini-avatar">
+<span class="mini-name">Priyanka</span>
+</div>
 
-  <!-- LEFT SIDE -->
-  <div class="projects-left">
+<ul class="hero-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html" class="active">Projects</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="contact.html" class="pill-btn">Contact</a></li>
+</ul>
 
-    <div class="project-item active" data-project="1">
-      <div class="project-title">
-        <span class="number">1.</span>
-        <h3>SIEM Dashboard</h3>
-      </div>
+</header>
 
-      <div class="project-description">
-        Developed a SIEM dashboard using Splunk to monitor logs, detect threats
-        and correlate security events.
-      </div>
-    </div>
 
-    <div class="project-item" data-project="2">
-      <div class="project-title">
-        <span class="number">2.</span>
-        <h3>Network IDS</h3>
-      </div>
+<!-- PAGE TITLE -->
+<div class="projects-header">
 
-      <div class="project-description">
-        Implemented Snort IDS with custom rules to detect suspicious network activity.
-      </div>
-    </div>
+<h1 class="projects-main-title">PROJECTS</h1>
 
-    <div class="project-item" data-project="3">
-      <div class="project-title">
-        <span class="number">3.</span>
-        <h3>Vulnerability Scanner</h3>
-      </div>
-
-      <div class="project-description">
-        Built a scanner to detect security vulnerabilities in web applications.
-      </div>
-    </div>
-
-    <div class="project-item" data-project="4">
-      <div class="project-title">
-        <span class="number">4.</span>
-        <h3>Threat Hunting</h3>
-      </div>
-
-      <div class="project-description">
-        Conducted proactive threat hunting using log analysis and MITRE ATT&CK techniques.
-      </div>
-    </div>
-
-  </div>
-
-  <!-- RIGHT SIDE IMAGE -->
-  <div class="projects-right">
-      <img id="projectImage" src="images/project1.png">
-  </div>
+<p class="projects-subtitle">
+Hands-on cyber security projects showcasing real-world skills
+</p>
 
 </div>
-  </section>
 
-  <script>
+
+<!-- MAIN PROJECT LAYOUT -->
+<div class="projects-container">
+
+
+<!-- LEFT PROJECT LIST -->
+<div class="projects-left">
+
+<!-- PROJECT 1 -->
+<div class="project-item active" data-project="1">
+
+<div class="project-title">
+<span class="number">1.</span>
+<h3>SIEM Log Monitoring</h3>
+</div>
+
+<div class="project-description">
+Built a SIEM monitoring dashboard using Splunk to analyse system logs,
+correlate security events and detect suspicious activity across multiple hosts.
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+<div class="project-item" data-project="2">
+
+<div class="project-title">
+<span class="number">2.</span>
+<h3>Network Intrusion Detection</h3>
+</div>
+
+<div class="project-description">
+Configured Snort IDS with custom detection rules to identify malicious
+network traffic and alert potential intrusion attempts.
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+<div class="project-item" data-project="3">
+
+<div class="project-title">
+<span class="number">3.</span>
+<h3>Vulnerability Scanner</h3>
+</div>
+
+<div class="project-description">
+Developed a basic vulnerability scanner using Python and Nmap
+to identify open ports, services and security weaknesses.
+</div>
+
+</div>
+
+
+<!-- PROJECT 4 -->
+<div class="project-item" data-project="4">
+
+<div class="project-title">
+<span class="number">4.</span>
+<h3>Threat Hunting</h3>
+</div>
+
+<div class="project-description">
+Performed proactive threat hunting using log analysis and
+MITRE ATT&CK framework techniques to identify hidden threats.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT IMAGE -->
+<div class="projects-right">
+
+<img
+id="projectImage"
+src="images/project1.png"
+alt="Cyber Security Project Preview"
+class="project-preview"
+loading="lazy"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SCRIPT -->
+<script>
 
 const items = document.querySelectorAll(".project-item");
 const image = document.getElementById("projectImage");
 
 items.forEach(item => {
 
-item.addEventListener("click", ()=>{
+item.addEventListener("click", () => {
 
-items.forEach(i=>i.classList.remove("active"));
+items.forEach(el => el.classList.remove("active"));
+
 item.classList.add("active");
 
-let id = item.getAttribute("data-project");
+const id = item.dataset.project;
 
-image.src = "images/project"+id+".png";
+image.src = `images/project${id}.png`;
 
 });
 
@@ -114,6 +164,6 @@ image.src = "images/project"+id+".png";
 
 </script>
 
+
 </body>
 </html>
-
