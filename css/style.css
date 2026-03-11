@@ -286,21 +286,30 @@ nav a.active {
 /* VISION NOTE BOX */
 
 .vision-section {
-  margin-bottom: 35px;
+  margin-bottom: 40px;  /* More space below */
 }
 
 .vision-box {
-  background: #ade8f4; /* as requested */
-  padding: 18px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: #afdaeo !important;
+  padding: 28px 32px;   /* More padding inside */
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(175, 218, 224, 0.3);
+  border-left: 6px solid #5f6bff;
+  margin-top: 20px;
+  min-height: 120px;    /* Minimum height */
+  display: flex;
+  align-items: center;
 }
 
 .vision-box p {
   font-size: 16px;
-  color: #123;
+  color: #123456 !important;
   line-height: 1.8;
+  margin: 0;
+  max-width: 100%;      /* Prevent overflow */
+  word-wrap: break-word;
 }
+
 
 /* EDUCATION HEADER TAG */
 
