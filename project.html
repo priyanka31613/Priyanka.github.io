@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Priyanka | Cyber Security Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-card">
+
+      <!-- top mini profile and menu -->
+      <header class="hero-header">
+        <div class="mini-profile">
+          <img src="images/profile.png" alt="Profile" class="mini-avatar">
+          <span class="mini-name">Priyanka</span>
+        </div>
+        <ul class="hero-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html" class="pill-btn">Contact</a></li>
+        </ul>
+      </header>
+
+      <!-- PROJECTS HEADER -->
+      <div class="projects-header">
+        <h1 class="projects-main-title">PROJECTS</h1>
+        <p class="projects-subtitle">Hands-on cyber security projects showcasing real-world skills</p>
+      </div>
+
+      <div class="projects-container">
+        
+        <!-- LEFT: PROJECT TITLES (STACKED) -->
+        <div class="projects-list">
+          <button class="project-btn active" data-project="1">
+            <span>SIEM Dashboard</span>
+            <span class="arrow">▾</span>
+          </button>
+          
+          <button class="project-btn" data-project="2">
+            <span>Network IDS</span>
+            <span class="arrow">▸</span>
+          </button>
+          
+          <button class="project-btn" data-project="3">
+            <span>Vulnerability Scanner</span>
+            <span class="arrow">▸</span>
+          </button>
+          
+          <button class="project-btn" data-project="4">
+            <span>Threat Hunting</span>
+            <span class="arrow">▸</span>
+          </button>
+        </div>
+
+        <!-- RIGHT: IMAGE + DESCRIPTION -->
+        <div class="projects-detail">
+          <!-- IMAGE AREA -->
+          <div class="project-image-area">
+            <img src="images/siem-dashboard.png" alt="SIEM Dashboard" class="project-preview">
+          </div>
+
+          <!-- DESCRIPTION AREA (hidden by default) -->
+          <div class="project-desc-area">
+            <div class="project-content active" data-project="1">
+              <h2 class="project-detail-title">SIEM Dashboard Implementation</h2>
+              <p class="project-detail-text">
+                Developed a comprehensive SIEM dashboard using Splunk to monitor network 
+                traffic, correlate security events across multiple sources, and create 
+                custom detection rules for advanced persistent threats (APTs).
+              </p>
+              <ul class="project-tech-list">
+                <li><strong>Tools:</strong> Splunk Enterprise, ELK Stack</li>
+                <li><strong>Skills:</strong> Log parsing, correlation rules, real-time alerting</li>
+                <li><strong>Results:</strong> 40% faster threat detection, reduced alert fatigue</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-demo-btn">Live Demo</a>
+                <a href="#" class="project-github">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-content" data-project="2">
+              <h2 class="project-detail-title">Network Intrusion Detection System</h2>
+              <p class="project-detail-text">
+                Deployed Snort IDS with 50+ custom rules to detect network intrusions 
+                and implemented automated blocking mechanisms for malicious IPs.
+              </p>
+              <!-- ... similar structure ... -->
+            </div>
+
+            <!-- Add more project-content divs for project 3 & 4 -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // JavaScript for hover + click functionality
+    const projectBtns = document.querySelectorAll('.project-btn');
+    const projectPreviews = document.querySelector('.project-preview');
+    const projectContents = document.querySelectorAll('.project-content');
+
+    projectBtns.forEach(btn => {
+      // Hover: show image
+      btn.addEventListener('mouseenter', function() {
+        const projectId = this.getAttribute('data-project');
+        projectPreviews.src = `images/project${projectId}.png`;
+      });
+
+      // Click: expand description
+      btn.addEventListener('click', function() {
+        const projectId = this.getAttribute('data-project');
+        
+        // Update active button
+        projectBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show image
+        projectPreviews.src = `images/project${projectId}.png`;
+        
+        // Show description
+        projectContents.forEach(content => content.classList.remove('active'));
+        document.querySelector(`[data-project="${projectId}"]`).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
 
