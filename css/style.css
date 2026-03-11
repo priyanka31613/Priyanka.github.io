@@ -238,3 +238,168 @@ nav a.active {
     text-align: center;
   }
 }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* ABOUT PAGE GENERAL */
+
+.about-header {
+  text-align: left;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.about-main-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  color: #111;
+}
+
+.about-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #999;
+  margin-top: 6px;
+}
+
+.about-me {
+  margin-bottom: 30px;
+}
+
+.about-me h2,
+.vision-section h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.about-me p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* VISION NOTE BOX */
+
+.vision-section {
+  margin-bottom: 35px;
+}
+
+.vision-box {
+  background: #afdaeo; /* as requested */
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vision-box p {
+  font-size: 16px;
+  color: #123;
+  line-height: 1.8;
+}
+
+/* EDUCATION HEADER TAG */
+
+.edu-header-row {
+  margin: 10px 0 20px;
+}
+
+.edu-tag {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+/* EDUCATION GRID (3 COLUMNS) */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.edu-card {
+  background: #f7f7f7;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-photo {
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+  background: #d9d9d9;
+}
+
+.edu-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-body {
+  padding: 18px 18px 20px;
+}
+
+.edu-name {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.edu-location {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.edu-course {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.edu-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.edu-skills {
+  list-style: none;
+  padding-left: 0;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.edu-skills li::before {
+  content: "• ";
+  color: #5f6bff;
+}
+
+/* RESPONSIVE EDUCATION */
+
+@media (max-width: 900px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
