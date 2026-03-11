@@ -323,7 +323,7 @@ nav a.active {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;  /* CHANGED: Now 2 equal columns */
   gap: 24px;
 }
 
