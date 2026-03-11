@@ -414,195 +414,123 @@ nav a.active {
 }
 
 
-/*--------------------------------------------------------------------PROJECT------------------------------------------------------------------------------------------*/
-
-/* MAIN PROJECT LAYOUT */
+/*------------------------------------------------ PROJECT SECTION ------------------------------------------------*/
 
 .projects-container{
 display:flex;
-align-items:center;
-justify-content:space-between;
-gap:80px;
+gap:60px;
 margin-top:40px;
+align-items:flex-start;
 }
 
-/* LEFT SIDE LIST */
+/* LEFT SIDE */
 
-.projects-list{
-width:50%;
+.projects-left{
+width:45%;
 display:flex;
 flex-direction:column;
+gap:14px;
 }
 
-/* PROJECT ITEM */
+/* PROJECT CARD */
 
-.project-btn{
-background:none;
-border:none;
-border-bottom:1px solid #e6e6e6;
-padding:18px 0;
-font-size:22px;
-font-weight:600;
-color:#222;
-text-align:left;
+.project-item{
+background:#f8f8f8;
+border-radius:18px;
+padding:18px 22px;
 cursor:pointer;
-display:flex;
-justify-content:space-between;
-align-items:center;
-transition:0.3s;
+transition:all 0.35s ease;
+border:1px solid #e8e8e8;
+overflow:hidden;
 }
 
-/* NUMBER STYLE */
+/* TITLE */
 
-.project-btn span:first-child{
+.project-title{
 display:flex;
 align-items:center;
 gap:10px;
-}
-
-/* HOVER EFFECT */
-
-.project-btn:hover{
-color:#5f6bff;
-}
-
-/* ACTIVE PROJECT */
-
-.project-btn.active{
-color:#5f6bff;
-}
-
-/* ARROW */
-
-.arrow{
 font-size:18px;
-transition:0.3s;
+font-weight:600;
 }
 
-.project-btn.active .arrow{
-transform:rotate(180deg);
+.number{
+font-size:18px;
+color:#5f6bff;
+font-weight:700;
+}
+
+/* DESCRIPTION (ANIMATION) */
+
+.project-description{
+max-height:0;
+opacity:0;
+overflow:hidden;
+transition:all 0.45s ease;
+margin-top:10px;
+font-size:14px;
+color:#555;
+line-height:1.6;
+}
+
+/* ACTIVE CARD */
+
+.project-item.active{
+background:linear-gradient(135deg,#5f6bff,#4c57e6);
+color:white;
+transform:translateX(6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.project-item.active .project-description{
+max-height:120px;
+opacity:1;
+color:white;
 }
 
 /* RIGHT SIDE */
 
-.projects-detail{
-width:45%;
-display:flex;
-flex-direction:column;
-gap:30px;
-}
-
-/* IMAGE */
-
-.project-image-area{
+.projects-right{
+width:55%;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
+/* IMAGE */
+
 .project-preview{
 width:100%;
 max-width:420px;
-border-radius:20px;
-transform:rotate(-6deg);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-transition:0.4s;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+
+/* animation */
+opacity:1;
+transform:translateY(0) rotate(-5deg);
+transition:all 0.45s ease;
 }
 
-/* DESCRIPTION BOX */
+/* IMAGE ANIMATION WHEN CHANGED */
 
-.project-desc-area{
-background:#fafafa;
-border-radius:20px;
-padding:28px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* HIDE PROJECT TEXT */
-
-.project-content{
-display:none;
-}
-
-/* ACTIVE TEXT */
-
-.project-content.active{
-display:block;
-}
-
-/* TEXT STYLES */
-
-.project-detail-title{
-font-size:26px;
-margin-bottom:14px;
-color:#111;
-}
-
-.project-detail-text{
-font-size:15px;
-color:#444;
-line-height:1.8;
-margin-bottom:18px;
-}
-
-.project-tech-list{
-list-style:none;
-padding:0;
-margin-bottom:20px;
-}
-
-.project-tech-list li{
-padding:6px 0;
-font-size:14px;
-color:#555;
-border-bottom:1px solid #eee;
-}
-
-/* BUTTONS */
-
-.project-links{
-display:flex;
-gap:16px;
-}
-
-.project-demo-btn{
-background:#5f6bff;
-color:#fff;
-padding:10px 20px;
-border-radius:10px;
-text-decoration:none;
-font-size:14px;
-}
-
-.project-github{
-border:2px solid #5f6bff;
-color:#5f6bff;
-padding:10px 20px;
-border-radius:10px;
-text-decoration:none;
-font-size:14px;
-}
-
-.project-demo-btn:hover,
-.project-github:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 20px rgba(95,107,255,0.3);
+.project-preview.animate{
+opacity:0;
+transform:translateY(40px) rotate(-5deg);
 }
 
 /* RESPONSIVE */
 
-@media (max-width:900px){
+@media(max-width:900px){
 
 .projects-container{
 flex-direction:column;
-gap:40px;
 }
 
-.projects-list{
+.projects-left{
 width:100%;
 }
 
-.projects-detail{
+.projects-right{
 width:100%;
 }
 
